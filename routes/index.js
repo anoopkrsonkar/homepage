@@ -10,12 +10,20 @@ router.get('/', function(req, res, next) {
 });
 /* GET Hello World page. */
 router.get('/helloworld', function(req, res) {
+<<<<<<< HEAD
     res.render('helloworld', { title: 'Welocme to AreaHop' });
 });
 
 router.get('/search', function(req, res) {
     res.render('search', { title: 'Welocme to AreaHop' });
     //res.sendFile('search.html', { root: path.join(__dirname, '../public') });
+=======
+    res.render('helloworld', { title: 'Hello, World!' });
+});
+
+router.get('/jsearch', function(req, res) {
+    res.render('jsearch', { title: 'Hello, World!' });
+>>>>>>> 749953af7accb90c1e8f4faaf97508ae6afbe244
 });
 router.get('/search', function(req, res) {
     console.log(req.body.tipue_search_content);
@@ -113,7 +121,11 @@ router.post('/searchBusiness', function(req, res) {
 function(e,docs){
     console.log(docs);
         res.render('searchBusiness', {
+<<<<<<< HEAD
             "businesslist" : docs,
+=======
+            "searchBusiness" : docs,
+>>>>>>> 749953af7accb90c1e8f4faaf97508ae6afbe244
             });
  });
         /*
